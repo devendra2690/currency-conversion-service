@@ -11,10 +11,10 @@ public class CurrencyConversion {
 	private int quantity;
 	private int totalConversion;
 	private int serverPort;
-	private int conversionRate;
+	private int exchangeRate;
 	
 	public CurrencyConversion(int id, String fromCurrency, String toCurrency, int quantity, int totalConversion,
-			int serverPort, int conversionRate) {
+			int serverPort, int exchangeRate) {
 		super();
 		this.id = id;
 		this.fromCurrency = fromCurrency;
@@ -22,19 +22,19 @@ public class CurrencyConversion {
 		this.quantity = quantity;
 		this.totalConversion = totalConversion;
 		this.serverPort = serverPort;
-		this.conversionRate = conversionRate;
+		this.exchangeRate = exchangeRate;
 	}
 
 	public CurrencyConversion() {
 		
 	}
 
-	public int getConversionRate() {
-		return conversionRate;
+	public int getExchangeRate() {
+		return exchangeRate;
 	}
 
-	public void setConversionRate(int conversionRate) {
-		this.conversionRate = conversionRate;
+	public void setExchangeRate(int exchangeRate) {
+		this.exchangeRate = exchangeRate;
 	}
 
 	public int getId() {
@@ -89,6 +89,6 @@ public class CurrencyConversion {
 	public String toString() {
 		return "CurrencyConversion [id=" + id + ", fromCurrency=" + fromCurrency + ", toCurrency=" + toCurrency
 				+ ", quantity=" + quantity + ", totalConversion=" + totalConversion + ", serverPort=" + serverPort
-				+ ", conversionRate=" + conversionRate + "]";
+				+ ", conversionRate=" + exchangeRate + "]";
 	}
 }
