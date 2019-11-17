@@ -16,7 +16,7 @@ public class CurrencyConversionController {
 	@Autowired
 	CurrencyExchangeProxyService currencyExchangeProxyService;
 	
-	@GetMapping("currency-conversion/{from}/to/{to}/quantity/{quantity}")
+	@GetMapping("/currency-conversion/{from}/to/{to}/quantity/{quantity}")
 	public CurrencyConversion currencyConverion(@PathVariable("from") String from,@PathVariable("to") String to,
 			                                           @PathVariable("quantity") int quantity) {
 		
@@ -34,7 +34,7 @@ public class CurrencyConversionController {
 				                          response.getBody().getServerPort(), response.getBody().getExchangeRate());
 	}
 	
-	@GetMapping("currency-conversion-feign/{from}/to/{to}/quantity/{quantity}")
+	@GetMapping("/currency-conversion-feign/{from}/to/{to}/quantity/{quantity}")
 	public CurrencyConversion currencyConverionFein(@PathVariable("from") String from,@PathVariable("to") String to,
 			                                           @PathVariable("quantity") int quantity) {
 		
